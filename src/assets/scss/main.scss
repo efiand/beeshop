@@ -1,0 +1,46 @@
+@import 'env';
+
+@include font-face('Rubik', 'rubik', (400, 500, 700));
+
+body {
+	// @each $icon in ('') {
+	// 	--icon-#{$icon}: url('../icons/#{$icon}.svg');
+	// }
+
+	min-width: 320px;
+	margin: 0;
+	font-size: 16px;
+	line-height: 19 / 16;
+	font-family: 'Rubik', sans-serif;
+	color: #222528;
+}
+
+a {
+	color: inherit;
+	text-decoration-skip-ink: none;
+}
+
+button {
+	margin: 0; // Safari
+	font-family: inherit;
+	border: none;
+	cursor: pointer;
+	user-select: none;
+}
+
+a,
+button {
+	@include motions {
+		transition: $transition-default;
+		transition-property: color, background-color, border-color, box-shadow;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+[hidden] {
+	display: none !important;
+}
